@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Move all files beginning with an uppercase letter to /tmp/u
+
+# Create /tmp/u directory if it doesn't exist 
+[ ! -d "/tmp/u" ] && mkdir "/tmp/u"
+
+# Find all files with uppercase letter and move it to /tmp/u
+for file in $(ls | egrep '^[A-Z].*'); do
+        mv $file /tmp/u
+done
