@@ -1,11 +1,2 @@
 #!/bin/bash
-
-#loop through all files
-for FILE in *~
-do 
-  #if the file exists, delete it
-  if [ -f "$FILE" ]
-    then
-       rm "$FILE"
-  fi
-done
+rm *~
